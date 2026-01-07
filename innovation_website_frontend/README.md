@@ -1,82 +1,68 @@
-# Lightweight React Template for KAVIA
+# Innovation Website Frontend (Mock JSON)
 
-This project provides a minimal React template with a clean, modern UI and minimal dependencies.
+A frontend-only React app for showcasing and tracking innovations using JSON mock data (no backend required). Built with a modern **Ocean Professional** theme (blue + amber), responsive layout, and accessibility-minded components.
 
 ## Features
 
-- **Lightweight**: No heavy UI frameworks - uses only vanilla CSS and React
-- **Modern UI**: Clean, responsive design with KAVIA brand styling
-- **Fast**: Minimal dependencies for quick loading times
-- **Simple**: Easy to understand and modify
+- Header with navigation (Home, Favorites)
+- Home page:
+  - Innovations grid
+  - Search across title/description/owner/tags
+  - Filters (status, category)
+  - Sorting (last updated, title)
+- Innovation detail view in an accessible modal
+- Create/Edit innovation via modal form
+- Local persistence:
+  - Innovations and favorites stored in `localStorage`
+  - Initial seed comes from JSON under `/public/mock/innovations.json`
+- Favorites shortlist stored in `localStorage`
+- Responsive design + reduced-motion support
 
 ## Getting Started
 
-In the project directory, you can run:
+From this directory:
 
-### `npm start`
-
-Runs the app in development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-### `npm test`
-
-Launches the test runner in interactive watch mode.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-## Customization
-
-### Colors
-
-The main brand colors are defined as CSS variables in `src/App.css`:
-
-```css
-:root {
-  --kavia-orange: #E87A41;
-  --kavia-dark: #1A1A1A;
-  --text-color: #ffffff;
-  --text-secondary: rgba(255, 255, 255, 0.7);
-  --border-color: rgba(255, 255, 255, 0.1);
-}
+```bash
+npm start
 ```
 
-### Components
+Open http://localhost:3000
 
-This template uses pure HTML/CSS components instead of a UI framework. You can find component styles in `src/App.css`. 
+## Mock Data
 
-Common components include:
-- Buttons (`.btn`, `.btn-large`)
-- Container (`.container`)
-- Navigation (`.navbar`)
-- Typography (`.title`, `.subtitle`, `.description`)
+### Seed file
 
-## Learn More
+The app loads initial innovations from:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- `public/mock/innovations.json`
 
-### Code Splitting
+On first successful load, it caches the innovations into `localStorage`. After that, local edits persist across refresh.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Resetting data
 
-### Analyzing the Bundle Size
+To reset to the original seed:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+1. Open DevTools → Application → Local Storage
+2. Remove keys:
+   - `innovation_showcase__innovations`
+   - `innovation_showcase__favorites`
+3. Refresh the page
 
-### Making a Progressive Web App
+### Optional environment variable
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- `REACT_APP_API_BASE` (optional):
+  - If set, the app fetches mock data from `${REACT_APP_API_BASE}/mock/innovations.json`
+  - Otherwise it defaults to `/mock/innovations.json` (local public asset)
 
-### Advanced Configuration
+Example:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+```bash
+REACT_APP_API_BASE=https://example-cdn.com npm start
+```
 
-### Deployment
+## Scripts
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- `npm start` - dev server
+- `npm test` - tests
+- `npm run build` - production build
+"""

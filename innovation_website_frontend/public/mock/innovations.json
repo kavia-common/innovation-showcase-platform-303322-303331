@@ -1,0 +1,64 @@
+{
+  "innovations": [
+    {
+      "id": "inv-1001",
+      "title": "Customer Support Copilot",
+      "description": "AI-assisted support responses with citation-style references to internal knowledge articles and past tickets.",
+      "owner": "Ava Chen",
+      "status": "In Progress",
+      "category": "AI & Automation",
+      "tags": ["LLM", "Support", "Knowledge Base"],
+      "lastUpdated": "2026-01-02T10:05:00.000Z"
+    },
+    {
+      "id": "inv-1002",
+      "title": "Supply Chain Risk Radar",
+      "description": "Continuous monitoring of supplier health, shipping disruptions, and geopolitical risk signals with alerts and mitigation playbooks.",
+      "owner": "Ravi Patel",
+      "status": "Proposed",
+      "category": "Operations",
+      "tags": ["Risk", "Alerts", "Analytics"],
+      "lastUpdated": "2025-12-14T16:18:00.000Z"
+    },
+    {
+      "id": "inv-1003",
+      "title": "Green Cloud FinOps",
+      "description": "FinOps dashboards that optimize cloud spend while tracking estimated carbon impact and recommending lower-emission configurations.",
+      "owner": "Mina Alvarez",
+      "status": "Active",
+      "category": "Sustainability",
+      "tags": ["FinOps", "Carbon", "Cloud"],
+      "lastUpdated": "2026-01-05T08:40:00.000Z"
+    },
+    {
+      "id": "inv-1004",
+      "title": "Design System Linter",
+      "description": "Static checks for UI consistency (spacing, color tokens, accessibility) integrated into CI for faster, more consistent delivery.",
+      "owner": "Noah Kim",
+      "status": "On Hold",
+      "category": "Developer Experience",
+      "tags": ["Accessibility", "CI", "Design System"],
+      "lastUpdated": "2025-11-30T12:00:00.000Z"
+    },
+    {
+      "id": "inv-1005",
+      "title": "Personalized Learning Paths",
+      "description": "Adaptive onboarding and upskilling journeys using role-based competencies, project history, and short assessments.",
+      "owner": "Sophia Nguyen",
+      "status": "Completed",
+      "category": "People & Culture",
+      "tags": ["Learning", "Onboarding", "Personalization"],
+      "lastUpdated": "2025-10-19T09:15:00.000Z"
+    },
+    {
+      "id": "inv-1006",
+      "title": "Field Service Route Optimizer",
+      "description": "Optimizes daily technician routes based on job priority, drive time, parts availability, and customer time windows.",
+      "owner": "Liam Johnson",
+      "status": "Active",
+      "category": "Operations",
+      "tags": ["Optimization", "Routing", "Mobile"],
+      "lastUpdated": "2026-01-04T14:22:00.000Z"
+    }
+  ]
+}
