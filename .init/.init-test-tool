@@ -1,0 +1,4 @@
+{
+    "command": "npm run test",
+    "working_directory": "/home/kavia/workspace/code-generation/innovation-showcase-platform-303322-303331/innovation_website_frontend"
+}
